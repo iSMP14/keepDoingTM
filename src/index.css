@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Usar Rem o EM en vez de Vh y Vw */
 body {
   background: rgb(60, 16, 83);
   background: linear-gradient(
