@@ -1,15 +1,9 @@
-/* App de tareas
- Donde el usuario agregue una tarea mediante el prompt y esta sea añadida a una variable para que la muestre por consola
- Ingresar varias tareas y que todas las muestre en consola */
-
 let taskCounter = 1;
-let tasks = [];
+const tasks = [];
 
 function generateTaskId() {
   return taskCounter++;
 }
-
-let newTask = confirm("¿Deseas crear una nueva tarea?");
 
 function Task(id, name, state, date) {
   this.id = id;
@@ -24,12 +18,33 @@ function Task(id, name, state, date) {
   }
 }
 
-const tarea1 = new Task(
-  generateTaskId(),
-  "Hacer la compra",
-  newTask,
-  new Date()
-);
+function createTask() {
+  const taskName = prompt("Ingresa el nombre de la tarea:");
+  if (taskName) {
+    const newTask = new Task(generateTaskId(), taskName, false, new Date());
+    tasks.push(newTask);
+    console.log("Ingresaste una Tarea", newTask);
+  } else {
+    alert("No ingresaste una tarea");
+  }
+}
 
-console.log(newTask);
-console.log(tarea1);
+function displayTasks() {
+  console.log("Lista de tareas:");
+  tasks.forEach((task) => {
+    console.log(
+      `Tarea ${task.id}: Nombre: ${task.name} (Completa: ${task.state})`
+    );
+  });
+}
+
+createTask();
+
+let continueAdding = confirm("¿Desea seguir añadiendo tareas?");
+
+while (continueAdding) {
+  createTask();
+  continueAdding = confirm("¿Desea seguir añadiendo tareas?");
+}
+
+displayTasks();
