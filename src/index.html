@@ -6,12 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keep Doing!</title>
   <link rel="stylesheet" href="./index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <!-- <script type="module" src="./index.js"></script> -->
 </head>
 
 <body>
   <div class="container">
-    <nav class="navbar"></nav>
+    <nav class="navbar">
+      <div class="navbar_search">
+        <form method="post" action="/send/">
+          <label for="search">...</label>
+          <input id="search" placeholder="Search ..." autocomplete="false">
+        </form>
+      </div>
+    </nav>
     <div class="sidebar">
       <div class="sidebar_logo">Logo</div>
       <div class="sidebar_main">Main</div>
@@ -20,10 +30,32 @@
       </div>
     </div>
     <div class="task_container">
-      <div class="task_board--1">To Do</div>
-      <div class="task_board--2">Doing</div>
-      <div class="task_board--3">Finished</div>
+      <div class="task_board"> <!---- Board 1 ---->
+        <div class="task_states"> <!---- Nav ---->
+          <p class="task_states--title">Pending</p>
+          <div class="task_states--menu"><img class="icon_menu" src="./assets/menu.svg" alt="vertical menu"></div>
+        </div>
+        <div class="task_element" id="pending"> <!---- Body ---->
+        </div>
+      </div>
+      <div class="task_board"> <!---- Board 2 ---->
+        <div class="task_states"> <!---- Nav ---->
+          <p class="task_states--title">In progress</p>
+          <div class="task_states--menu"><img class="icon_menu" src="./assets/menu.svg" alt="vertical menu"></div>
+        </div>
+        <div class="task_element" id="inProgress"> <!---- Body ---->
+        </div>
+      </div>
+      <div class="task_board"> <!---- Board 3 ---->
+        <div class="task_states"> <!---- Nav ---->
+          <p class="task_states--title">Done</p>
+          <div class="task_states--menu"><img class="icon_menu" src="./assets/menu.svg" alt="vertical menu"></div>
+        </div>
+        <div class="task_element" id="done"> <!---- Body ---->
+        </div>
+      </div>
     </div>
+  </div>
   </div>
 </body>
 
