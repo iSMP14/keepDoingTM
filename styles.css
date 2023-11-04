@@ -95,7 +95,12 @@ body {
     text-align: center;
     width: 100%;
     height: 5rem;
-    padding: 2rem;
+    padding: 1rem;
+
+    & .sidebar_logo--image{
+      width: 23rem;
+    }
+
   }
   & .sidebar_main {
     font-family: var(--font-regular);
