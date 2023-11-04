@@ -7,17 +7,20 @@
 html {
   height: 100vh;
 }
-body {
-  height: 100%;
-  margin: auto;
-  background-color: #ffffff;
-}
 
 :root {
   --task-container: #c4c4c4;
   --color-blanco: #fcfcfc;
   --font-regular: "Open Sans", sans-serif;
 }
+
+body {
+  height: 100%;
+  margin: auto;
+  background-color: #ffffff;
+}
+
+
 .container {
   height: 100%;
   width: 100%;
