@@ -17,7 +17,7 @@ html {
 body {
   height: 100%;
   margin: auto;
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
 }
 
 
@@ -36,6 +36,10 @@ body {
   grid-column-start: 2;
   grid-row-end: 2;
   grid-column-end: 7;
+  display: flex;
+  justify-content: space-between;
+
+  /* Search bar Config */
 
   & .search__container {
     padding-top: 1.2rem;
@@ -43,7 +47,7 @@ body {
   }
 
   & .search__input {
-    width: 15%;
+    width: 100%;
     padding: 12px 24px;
     background-color: transparent;
     transition: transform 250ms ease-in-out;
@@ -78,6 +82,27 @@ body {
     border-radius: 0;
     background-position: 100% center;
   }
+
+  /* Name Board Config */
+
+   & .task__boardName{
+    border: 1px solid red;
+    height: 4rem;
+    width: 50rem;
+    margin-right: 10rem;
+    margin-top: 0.5rem;
+   }
+
+   & .task__navProfile {
+
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid red;
+    border-radius: 50%;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+   }
+
 }
 
 .sidebar {
@@ -110,12 +135,26 @@ body {
     text-align: center;
     width: 100%;
     height: 43rem;
+    padding-top: 1rem;
+    border-top: 1px solid #A1A1A1;
+    
   }
   & .sidebar_footer {
     font-family: var(--font-regular);
     text-align: center;
     width: 100%;
     height: 10rem;
+    padding-top: 1rem;
+    border-top: 1px solid #A1A1A1;
+    display: flex;
+
+    & .sidebar_footer--containerOne{
+      & .footer__creator{}
+      & .footer__about{
+
+      }
+      & .footer__darkmode{}
+    }
   }
 }
 
