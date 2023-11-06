@@ -252,6 +252,30 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    padding: 2rem 0;
+
+    & .add_task{
+      border: 1px solid black;
+      
+    }
+
+
+    & .form{
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    & .task_style{
+      overflow: wrap;
+      height: fit-content;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

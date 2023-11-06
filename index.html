@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
-  <!-- <script type="module" src="./index.js"></script> -->
+  <script type="module" src="./script.js"></script>
 </head>
 
 <body>
@@ -45,7 +45,15 @@
             <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" />
           </div>
         </div>
-        <div class="task_element" id="pending"><!---- Body ----></div>
+        <div class="task_element" id="pending">
+          <!---- Body ---->
+          <button class="add_task">Add task</button>
+          <div class="form">
+            <p>Task Name: </p><input type="text" id="taskName" value="">
+            <p>Task Description: </p> <input type="text" id="taskDescription" value="">
+            <button id="myButton">Add task</button>
+          </div>
+        </div>
       </section>
       <section class="task_board">
         <!---- Board 2 ---->
