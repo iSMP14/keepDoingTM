@@ -253,10 +253,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 2rem 0;
+    padding: 2rem 0.5rem;
+    overflow-y: auto;
+    scrollbar-color: #575756 #c4c4c4;
+    scrollbar-width: thin;
+    gap: 0.5rem;
+    
+
 
     & .add_task{
       border: 1px solid black;
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+      border-radius: 12px;
+      background-color: #0284C7;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
       
     }
 
@@ -271,11 +283,12 @@ body {
     }
 
     & .task_style{
-      overflow: wrap;
+      overflow-wrap: break-word;
       height: fit-content;
       border: 1px solid black;
       display: flex;
       flex-direction: column;
+      border-radius: 12px;
     }
   }
 }
