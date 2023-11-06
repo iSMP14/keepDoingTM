@@ -28,7 +28,14 @@
       <div class="sidebar_logo">
         <img class="sidebar_logo--image" src="src/assets/logo.svg" />
       </div>
-      <div class="sidebar_main">Main</div>
+      <div class="sidebar_main">Main
+        <button id="addTaskButton" class="add_task">Add Task</button>
+        <form id="form">
+          <p>Task Name: </p><input type="text" id="taskName" value="">
+          <p>Task Description: </p> <input type="text" id="taskDescription" value="">
+          <button id="myButton">Add task</button>
+        </form>
+      </div>
       <footer class="sidebar_footer">
         <div class="footer__creator">Creator</div>
         <div class="footer__about">About</div>
@@ -47,12 +54,7 @@
         </div>
         <div class="task_element" id="pending">
           <!---- Body ---->
-          <button id="addTaskButton" class="add_task">+</button>
-          <form id="form">
-            <p>Task Name: </p><input type="text" id="taskName" value="">
-            <p>Task Description: </p> <input type="text" id="taskDescription" value="">
-            <button id="myButton">Add task</button>
-          </form>
+
         </div>
       </section>
       <section class="task_board">
@@ -65,12 +67,6 @@
           </div>
         </div>
         <div class="task_element" id="inProgress"><!---- Body ---->
-          <button id="addTaskButton-2" class="add_task">+</button>
-          <form id="form-2">
-            <p>Task Name: </p><input type="text" id="taskName" value="">
-            <p>Task Description: </p> <input type="text" id="taskDescription" value="">
-            <button id="myButton-2">Add task</button>
-          </form>
         </div>
       </section>
       <section class="task_board">
@@ -83,12 +79,6 @@
           </div>
         </div>
         <div class="task_element" id="done"><!---- Body ---->
-          <button id="addTaskButton-3" class="add_task">+</button>
-          <form id="form-3">
-            <p>Task Name: </p><input type="text" id="taskName" value="">
-            <p>Task Description: </p> <input type="text" id="taskDescription" value="">
-            <button id="myButton-3">Add task</button>
-          </form>
         </div>
       </section>
     </main>

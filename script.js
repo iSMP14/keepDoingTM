@@ -11,7 +11,8 @@ document.getElementById("myButton").onclick = myFunction;
 
 let idCounter = 0;
 
-function myFunction() {
+function myFunction(event) {
+  event.preventDefault();
   idCounter++;
   const taskId = `div${idCounter}`;
   const taskNameValue = document.getElementById("taskName").value;
@@ -21,8 +22,10 @@ function myFunction() {
 }
 
 function newTaskElement(taskId, taskName, taskDescription) {
-  const pItem = document.createElement("div"); pItem.id = taskId; pItem.classList.add("task_style");
-  const node = document.createTextNode(`Task: ${taskName} \n Description: ${taskDescription}`);
+  const pItem = document.createElement("div");
+  pItem.id = taskId;
+  pItem.classList.add("task_style");
+  const node = document.createTextNode(`${taskName} : ${taskDescription}`);
   pItem.appendChild(node);
 
   const element = document.getElementById("pending");
@@ -30,7 +33,7 @@ function newTaskElement(taskId, taskName, taskDescription) {
   element.insertBefore(pItem, child);
 }
 
-document.getElementById("addTaskButton", "addTaskButton-2", "addTaskButton-3").onclick = addTaskB;
+document.getElementById("addTaskButton").onclick = addTaskB;
 
 function addTaskB() {
   const addTask = document.getElementById("form");
