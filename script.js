@@ -1,12 +1,3 @@
-/* const pItem = document.createElement("div"); pItem.id = "div1";
-const node = document.createTextNode("Hello World");
-pItem.appendChild(node);
-
-const element = document.getElementById("pending");
-const child = document.getElementById("div1");
-element.insertBefore(pItem, child);
- */
-
 document.getElementById("myButton").onclick = myFunction;
 
 let idCounter = 0;
