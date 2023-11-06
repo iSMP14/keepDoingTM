@@ -29,3 +29,10 @@ function newTaskElement(taskId, taskName, taskDescription) {
   const child = document.getElementById("div1");
   element.insertBefore(pItem, child);
 }
+
+document.getElementById("addTaskButton", "addTaskButton-2", "addTaskButton-3").onclick = addTaskB;
+
+function addTaskB() {
+  const addTask = document.getElementById("form");
+  addTask.classList.toggle("add_task--active");
+}

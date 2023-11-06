@@ -263,6 +263,8 @@ body {
 
     & .add_task{
       border: 1px solid black;
+      width: 2rem;
+      height: 2rem;
       margin: 0 0.5rem;
       padding: 0.5rem;
       border-radius: 12px;
@@ -273,7 +275,7 @@ body {
     }
 
 
-    & .form{
+    & .add_task--active{
       border: 1px solid black;
       display: flex;
       flex-direction: column;
@@ -290,5 +292,10 @@ body {
       flex-direction: column;
       border-radius: 12px;
     }
+
+    & form{
+      display: none;
+    }
+
   }
 }
