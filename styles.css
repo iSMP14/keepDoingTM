@@ -340,6 +340,10 @@ body {
       border-left: #575756 solid 0.4rem;
     }
 
+    .task_style:hover{
+      cursor: default;
+    }
+
 
 }
 }

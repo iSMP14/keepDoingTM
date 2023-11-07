@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
-  <script type="module" src="./script.js"></script>
+
 </head>
 
 <body>
@@ -33,7 +33,8 @@
             class="menu_down" /></button>
         <form id="form">
           <p>Task Name:</p><input type="text" id="taskName" value="" class="input_form" autocomplete="off">
-          <p>Task Description:</p> <textarea id="taskDescription" value="" class="input_form--desc"></textarea>
+          <p>Task Description:</p> <textarea autocomplete="off" id="taskDescription" value=""
+            class="input_form--desc"></textarea>
           <button id="myButton">Add task</button>
         </form>
       </div>
@@ -53,7 +54,7 @@
             <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" />
           </div>
         </div>
-        <div class="task_element" id="pending">
+        <div class="task_element" id="pending" ondragover="event.preventDefault();">
           <!---- Body ---->
 
         </div>
@@ -64,13 +65,14 @@
           <!---- Nav ---->
           <p class="task_states--title">In progress</p>
           <div class="task_states--menu">
-            <img class="icon_menu" src="./src/assets/menu.svg"" alt=" vertical menu">
+            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu">
           </div>
         </div>
-        <div class="task_element" id="inProgress"><!---- Body ---->
+        <div class="task_element" id="inProgress" ondragover="event.preventDefault();">
+          <!---- Body ---->
         </div>
       </section>
-      <section class="task_board">
+      <section class=" task_board">
         <!---- Board 3 ---->
         <div class="task_states">
           <!---- Nav ---->
@@ -79,11 +81,14 @@
             <img class="icon_menu" src="./src/assets/menu.svg"" alt=" vertical menu">
           </div>
         </div>
-        <div class="task_element" id="done"><!---- Body ---->
+        <div class="task_element" id="pending" ondragover="event.preventDefault();">
+          <!-- Body -->
+
         </div>
       </section>
     </main>
   </div>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>
