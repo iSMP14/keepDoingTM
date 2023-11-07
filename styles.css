@@ -130,7 +130,6 @@ body {
   /*Logo config*/
 
   & .sidebar_logo {
-    font-family: var(--font-regular);
     text-align: center;
     width: 100%;
     height: 5rem;
