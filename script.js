@@ -1,22 +1,32 @@
-document.getElementById("myButton").onclick = myFunction;
+
 
 let idCounter = 0;
-function myFunction(event) {
-  event.preventDefault();
+let taskForm = document.getElementById("form");
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   idCounter++;
   const taskId = `div${idCounter}`;
   const taskNameValue = document.getElementById("taskName").value;
   const taskDescValue = document.getElementById("taskDescription").value;
   newTaskElement(taskId, taskNameValue, taskDescValue);
-}
+})
 
+// new task element function -> Se encarga de Crear la task e insertarla en el elemento correspondiente
 function newTaskElement(taskId, taskName, taskDescription) {
   const pItem = document.createElement("div");
   pItem.id = taskId;
   pItem.classList.add("task_style");
   pItem.draggable = true;
-  const node = document.createTextNode(`${taskName}\n${taskDescription}`);
-  pItem.appendChild(node);
+
+  const parraphItem = document.createElement("p");
+  const node = document.createTextNode(`${taskName}`);
+  parraphItem.appendChild(node);
+  pItem.appendChild(parraphItem);
+  const parraphItem2 = document.createElement("p");
+  const node2 = document.createTextNode(`${taskDescription}`);
+  parraphItem2.appendChild(node2);
+  pItem.appendChild(parraphItem2);
+
   const element = document.getElementById("pending");
   const child = document.getElementById("id");
   element.insertBefore(pItem, child);
@@ -54,3 +64,6 @@ elements.forEach((element) => {
     }
   });
 });
+
+
+

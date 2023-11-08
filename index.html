@@ -32,10 +32,11 @@
         <button id="addTaskButton" class="add_task"> Add Task <img src="./src/assets/menu_down.svg" alt="add task"
             class="menu_down" /></button>
         <form id="form">
-          <p>Task Name:</p><input type="text" id="taskName" value="" class="input_form" autocomplete="off">
-          <p>Task Description:</p> <textarea autocomplete="off" id="taskDescription" value=""
-            class="input_form--desc"></textarea>
-          <button id="myButton">Add task</button>
+          <p>Task Name:</p>
+          <input type="text" id="taskName" class="input_form" autocomplete="off" required />
+          <p>Task Description:</p>
+          <textarea autocomplete="off" id="taskDescription" class="input_form--desc" required></textarea>
+          <button id="myButton" type="submit">Add task</button>
         </form>
       </div>
       <footer class="sidebar_footer">
@@ -51,7 +52,7 @@
           <!---- Nav ---->
           <p class="task_states--title">Pending</p>
           <div class="task_states--menu">
-            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" />
+            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" draggable="false" />
           </div>
         </div>
         <div class="task_element" id="pending" ondragover="event.preventDefault();">
