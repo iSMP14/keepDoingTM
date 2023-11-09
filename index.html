@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -21,7 +20,7 @@
       </div>
       <div class="task__boardName"></div>
       <div class="task__navProfile">
-        <img class="task__navProfile--image" src="src/assets/avatar.svg" alt="profile picture">
+        <img class="task__navProfile--image" src="src/assets/avatar.svg" alt="profile picture" />
       </div>
     </nav>
     <aside class="sidebar">
@@ -29,13 +28,47 @@
         <img class="sidebar_logo--image" src="src/assets/logo_app.svg" />
       </div>
       <div class="sidebar_main">
-        <button id="addTaskButton" class="add_task"> Add Task <img src="./src/assets/menu_down.svg" alt="add task"
-            class="menu_down" /></button>
+        <button id="addTaskButton" class="add_task">
+          Add Task
+          <img src="./src/assets/menu_down.svg" alt="add task" class="menu_down" />
+        </button>
         <form id="form">
           <p>Task Name:</p>
           <input type="text" id="taskName" class="input_form" autocomplete="off" required />
           <p>Task Description:</p>
           <textarea autocomplete="off" id="taskDescription" class="input_form--desc" required></textarea>
+
+          <!-- <p>Task Status:</p> -->
+          <div class="select-box">
+            <div class="select-box__current" tabindex="1">
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="1" value="2" name="Ben" checked="checked" />
+                <p class="select-box__input-text">Pending</p>
+              </div>
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="2" value="3" name="Ben" checked="checked" />
+                <p class="select-box__input-text">In Progress</p>
+              </div>
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="3" value="4" name="Ben" checked="checked" />
+                <p class="select-box__input-text">Done</p>
+              </div>
+              <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon"
+                aria-hidden="true" />
+            </div>
+            <ul class="select-box__list">
+              <li>
+                <label class="select-box__option" for="1" aria-hidden="aria-hidden">Pending</label>
+              </li>
+              <li>
+                <label class="select-box__option" for="2" aria-hidden="aria-hidden">In Progress</label>
+              </li>
+              <li>
+                <label class="select-box__option" for="3" aria-hidden="aria-hidden">Done</label>
+              </li>
+            </ul>
+          </div>
+
           <button id="myButton" type="submit">Add task</button>
         </form>
       </div>
@@ -57,7 +90,6 @@
         </div>
         <div class="task_element" id="pending" ondragover="event.preventDefault();">
           <!---- Body ---->
-
         </div>
       </section>
       <section class="task_board">
@@ -66,14 +98,14 @@
           <!---- Nav ---->
           <p class="task_states--title">In progress</p>
           <div class="task_states--menu">
-            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu">
+            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" />
           </div>
         </div>
         <div class="task_element" id="inProgress" ondragover="event.preventDefault();">
           <!---- Body ---->
         </div>
       </section>
-      <section class=" task_board">
+      <section class="task_board">
         <!---- Board 3 ---->
         <div class="task_states">
           <!---- Nav ---->
@@ -84,12 +116,11 @@
         </div>
         <div class="task_element" id="pending" ondragover="event.preventDefault();">
           <!-- Body -->
-
         </div>
       </section>
     </main>
   </div>
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="./script2.js"></script>
 </body>
 
 </html>

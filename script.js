@@ -13,12 +13,12 @@ taskForm.addEventListener("submit", (e) => {
 
 // new task element function -> Se encarga de Crear la task e insertarla en el elemento correspondiente
 function newTaskElement(taskId, taskName, taskDescription) {
-  const pItem = document.createElement("div");
+  const pItem = document.createElement("div");   // crea el elemento div
   pItem.id = taskId;
   pItem.classList.add("task_style");
   pItem.draggable = true;
 
-  const parraphItem = document.createElement("p");
+  const parraphItem = document.createElement("p"); // crea el parrafo y lo inserta en el div
   const node = document.createTextNode(`${taskName}`);
   parraphItem.appendChild(node);
   pItem.appendChild(parraphItem);
@@ -27,10 +27,13 @@ function newTaskElement(taskId, taskName, taskDescription) {
   parraphItem2.appendChild(node2);
   pItem.appendChild(parraphItem2);
 
-  const element = document.getElementById("pending");
+  const element = document.getElementById("pending"); // inserta el div en la task board
   const child = document.getElementById("id");
   element.insertBefore(pItem, child);
 }
+
+// add task button form
+
 
 document.getElementById("addTaskButton").onclick = addTaskB;
 
@@ -38,6 +41,10 @@ function addTaskB() {
   const addTask = document.getElementById("form");
   addTask.classList.toggle("add_task--active");
 }
+
+
+
+// drag and drop
 
 let dragged = null;
 
@@ -66,4 +73,10 @@ elements.forEach((element) => {
 });
 
 
+document.getElementById("task_status--icon").onclick = addTaskStatus;
+
+function addTaskStatus() {
+  const addTaskState = document.getElementById("task_status--select");
+  addTaskState.classList.toggle("task_status--active");
+}
 
