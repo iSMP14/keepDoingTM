@@ -12,7 +12,7 @@ html {
   --task-container: #c4c4c4;
   --color-blanco: #fcfcfc;
   --font-regular: "Open Sans", sans-serif;
-  --color-morado: #7F5283;
+  --color-morado: #7f5283;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
   margin: auto;
   background-color: var(--color-blanco);
 }
-
 
 .container {
   height: 100%;
@@ -87,18 +86,18 @@ body {
 
   /* Name Board Config */
 
-   & .task__boardName{
+  & .task__boardName {
     height: 4rem;
     width: 50rem;
     margin-right: 10rem;
     margin-top: 0.5rem;
     border-radius: 1rem;
     border: 1px solid black;
-   }
+  }
 
   /* Profile Config */
 
-   & .task__navProfile {
+  & .task__navProfile {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -106,12 +105,11 @@ body {
     margin-top: 0.5rem;
     object-fit: cover;
 
-    & .task__navProfile--image{
+    & .task__navProfile--image {
       width: 4rem;
       height: 4rem;
     }
-   }
-
+  }
 }
 
 .sidebar {
@@ -135,14 +133,12 @@ body {
     height: 5rem;
     padding: 1rem;
 
-    & .sidebar_logo--image{
+    & .sidebar_logo--image {
       width: 23rem;
     }
-
   }
 
-    /*Main config*/
-
+  /*Main config*/
 
   & .sidebar_main {
     font-family: var(--font-regular);
@@ -150,12 +146,11 @@ body {
     width: 100%;
     height: 43rem;
     padding: 1rem 0;
-    border-top: 1px solid #A1A1A1;
+    border-top: 1px solid #a1a1a1;
     display: flex;
     flex-direction: column;
 
-
-    & .add_task{
+    & .add_task {
       height: 2rem;
       width: 100%;
       font-family: var(--font-regular);
@@ -166,20 +161,19 @@ body {
       padding: 0 1rem;
       font-size: large;
 
-
-      & .menu_down{
+      & .menu_down {
         width: 1.5rem;
         height: 1.5rem;
       }
     }
 
-    & .add_task:hover{
+    & .add_task:hover {
       background-color: #c4c4c4;
       font-weight: bold;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    & .add_task--active{
+    & .add_task--active {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -189,8 +183,7 @@ body {
       gap: 1rem;
       padding: 1rem;
 
-
-      & .input_form{
+      & .input_form {
         width: 100%;
         height: 2rem;
         font-family: var(--font-regular);
@@ -199,7 +192,8 @@ body {
         border-radius: 10px;
       }
 
-      & .input_form--desc, textarea{
+      & .input_form--desc,
+      textarea {
         width: 100%;
         height: 5rem;
         font-family: var(--font-regular);
@@ -209,64 +203,53 @@ body {
         border-radius: 10px;
       }
 
-      & #myButton{
+      & #myButton {
         width: 6rem;
         height: 2rem;
         font: var(--font-regular);
-        background-color: #6FB8DE;
+        background-color: #6fb8de;
         border-radius: 15px;
-
-
-
       }
     }
 
-    
-    
-
-    & form{
+    & form {
       display: none;
     }
-
   }
-    
+}
+
+/*Footer config*/
+
+& .sidebar_footer {
+  font-family: var(--font-regular);
+  text-align: center;
+  width: 100%;
+  height: 10rem;
+  border-top: 1px solid #a1a1a1;
+  display: flex;
+  flex-direction: column;
+
+  & .footer__creator {
+    border: 1px solid red;
+    height: 5rem;
+    width: 13rem;
+    margin: 0.5rem auto;
   }
+  & .footer__about {
+    border: 1px solid red;
+    height: 5rem;
+    width: 13rem;
+    margin: 0.5rem auto;
+  }
+  & .footer__darkmode {
+    border: 1px solid red;
+    height: 5rem;
+    width: 13rem;
+    margin: 0.5rem auto;
+  }
+}
 
-    /*Footer config*/
-
-
-  & .sidebar_footer {
-    font-family: var(--font-regular);
-    text-align: center;
-    width: 100%;
-    height: 10rem;
-    border-top: 1px solid #A1A1A1;
-    display: flex;
-    flex-direction: column;
-
-      & .footer__creator{
-        border: 1px solid red;
-        height: 5rem;
-        width: 13rem;
-        margin: 0.5rem auto;
-      }
-      & .footer__about{
-        border: 1px solid red;
-        height: 5rem;
-        width: 13rem;
-        margin: 0.5rem auto;
-
-      }
-      & .footer__darkmode{
-        border: 1px solid red;
-        height: 5rem;
-        width: 13rem;
-        margin: 0.5rem auto;
-      }
-    }
-
-
-  /* Main config*/
+/* Main config*/
 
 .task_container {
   background-color: var(--task-container);
@@ -279,8 +262,7 @@ body {
   align-items: center;
 }
 
-
-  /* Task Cards config*/
+/* Task Cards config*/
 
 .task_board {
   font-family: var(--font-regular);
@@ -333,8 +315,8 @@ body {
     scrollbar-color: #575756 #c4c4c4;
     scrollbar-width: thin;
     gap: 0.5rem;
-    
-    & .task_style{
+
+    & .task_style {
       background-color: #dfe1e4;
       overflow-wrap: break-word;
       height: fit-content;
@@ -346,17 +328,13 @@ body {
       border-left: #575756 solid 0.4rem;
     }
 
-    .task_style:hover{
+    .task_style:hover {
       cursor: default;
     }
-
-
+  }
 }
-}
-
 
 /* Select Box */
-
 
 .select-box {
   position: relative;
@@ -364,7 +342,6 @@ body {
   width: 100%;
   font-size: 16px;
   color: #60666d;
-
 }
 
 .select-box__current {
@@ -376,21 +353,21 @@ body {
 .select-box__current:focus + .select-box__list {
   opacity: 1;
   -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
 }
 .select-box__current:focus + .select-box__list .select-box__option {
   cursor: pointer;
 }
 .select-box__current:focus .select-box__icon {
   -webkit-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 .select-box__icon {
   position: absolute;
   top: 50%;
   right: 15px;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 20px;
   opacity: 0.3;
   transition: 0.2s ease;
@@ -419,15 +396,15 @@ body {
   list-style: none;
   opacity: 0;
   -webkit-animation-name: HideList;
-          animation-name: HideList;
+  animation-name: HideList;
   -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-timing-function: step-start;
-          animation-timing-function: step-start;
+  animation-timing-function: step-start;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 .select-box__option {
@@ -435,7 +412,8 @@ body {
   padding: 15px;
   background-color: #fff;
 }
-.select-box__option:hover, .select-box__option:focus {
+.select-box__option:hover,
+.select-box__option:focus {
   color: #546c84;
   background-color: #fbfbfb;
 }
@@ -443,21 +421,21 @@ body {
 @-webkit-keyframes HideList {
   from {
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
   to {
     -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
   }
 }
 
 @keyframes HideList {
   from {
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
   to {
     -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
   }
 }
