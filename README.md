@@ -28,7 +28,7 @@
 
 ## Tecnologías 
 
-<a href="[_blank](https://keep-doing-it.vercel.app/)">
+<a href="https://keep-doing-it.vercel.app">
 <p align="center">
     <img src="https://skillicons.dev/icons?i=js,html,css" />
 </p>
