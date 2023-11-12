@@ -1,7 +1,48 @@
-# Keep Doing IT Task Manager
+<h1 align="center" > Keep Doing IT Task Manager </h1>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+
+
+<div align="center">
+  <strong> Descripción del proyecto </strong>
+</div>
+
+<br>
+
+<div align="center">
+  <p> Repositorio de mi proyecto "KeepDoing IT" para la certificación de JavaScript en Coderhouse.</p>
+  <p> Aquí encontrarás información sobre el proyecto, tecnologías usadas, instrucciones de uso y más.</p>
+  <p> Espero lo explores, participes y colabores</p>
+</div>
+
+## Índice 
+
+- [Visión General](#visión-general)
+- [Tecnologías](#tecnologías)
+- [Cómo contribuir](#cómo-contribuir)
+- [Licencia](#licencia)
+
+## Visión General
+
+
+
+
+## Tecnologías 
+
+<a href="[_blank](https://keep-doing-it.vercel.app/)">
+<p align="center">
+    <img src="https://skillicons.dev/icons?i=js,html,css" />
+</p>
+</a>
+
+
+
+
+
+## Cómo contribuir 
+
+
+
+## Licencia 
+
+
+---
