@@ -1,0 +1,20 @@
+{
+  "name": "javascript-proyect",
+  "version": "1.0.0",
+  "description": "task manager proyect ",
+  "main": "script2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSMP14/keepDoingTM.git"
+  },
+  "keywords": [],
+  "author": "Javier Cartes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSMP14/keepDoingTM/issues"
+  },
+  "homepage": "https://github.com/iSMP14/keepDoingTM#readme"
+}

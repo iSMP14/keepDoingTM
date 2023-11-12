@@ -196,6 +196,7 @@ body {
         font-family: var(--font-regular);
         border-bottom: black;
         padding: 0 0.5rem;
+        border-radius: 10px;
       }
 
       & .input_form--desc, textarea{
@@ -205,6 +206,7 @@ body {
         border-bottom: black;
         resize: none;
         padding: 0.5rem;
+        border-radius: 10px;
       }
 
       & #myButton{
@@ -354,12 +356,15 @@ body {
 
 
 /* Select Box */
+
+
 .select-box {
   position: relative;
   display: block;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   color: #60666d;
+
 }
 
 .select-box__current {
@@ -405,6 +410,7 @@ body {
   margin: 0;
   padding: 15px;
   background-color: #fff;
+  border-radius: 10px;
 }
 .select-box__list {
   position: absolute;

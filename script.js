@@ -1,6 +1,7 @@
-
-
+let tasks = [];
+const status = ["pending", "inProgress", "done"];
 let idCounter = 0;
+
 let taskForm = document.getElementById("form");
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -8,33 +9,81 @@ taskForm.addEventListener("submit", (e) => {
   const taskId = `div${idCounter}`;
   const taskNameValue = document.getElementById("taskName").value;
   const taskDescValue = document.getElementById("taskDescription").value;
-  newTaskElement(taskId, taskNameValue, taskDescValue);
-})
 
-// new task element function -> Se encarga de Crear la task e insertarla en el elemento correspondiente
-function newTaskElement(taskId, taskName, taskDescription) {
-  const pItem = document.createElement("div");   // crea el elemento div
-  pItem.id = taskId;
-  pItem.classList.add("task_style");
-  pItem.draggable = true;
+  const newTask = {
+    id: taskId,
+    name: taskNameValue,
+    description: taskDescValue,
+    status: "pending",
+  };
 
-  const parraphItem = document.createElement("p"); // crea el parrafo y lo inserta en el div
-  const node = document.createTextNode(`${taskName}`);
-  parraphItem.appendChild(node);
-  pItem.appendChild(parraphItem);
-  const parraphItem2 = document.createElement("p");
-  const node2 = document.createTextNode(`${taskDescription}`);
-  parraphItem2.appendChild(node2);
-  pItem.appendChild(parraphItem2);
+  tasks.push(newTask);
 
-  const element = document.getElementById("pending"); // inserta el div en la task board
-  const child = document.getElementById("id");
-  element.insertBefore(pItem, child);
+
+  console.table(tasks)
+  newTaskElement(newTask);
+
+  // Puedes realizar otras acciones aquí, como limpiar el formulario o actualizar la interfaz.
+});
+
+
+
+function newTaskElement(task) {
+    const pItem = document.createElement("div");
+    pItem.id = task.id;
+    pItem.classList.add("task_style");
+    pItem.draggable = true;
+  
+    const parraphItem = document.createElement("p");
+    const node = document.createTextNode(`${task.name}`);
+    parraphItem.appendChild(node);
+    pItem.appendChild(parraphItem);
+  
+    const parraphItem2 = document.createElement("p");
+    const node2 = document.createTextNode(`${task.description}`);
+    parraphItem2.appendChild(node2);
+    pItem.appendChild(parraphItem2);
+  
+    const element = document.getElementById("pending");
+    element.appendChild(pItem);
+  
+    // Actualizar el estado de la tarea en la interfaz gráfica
+    pItem.addEventListener("dragstart", (event) => {
+      dragged = event.target;
+    });
+  
+    pItem.addEventListener("dragover", (event) => {
+      event.preventDefault();
+    });
+  
+    pItem.addEventListener("drop", (event) => {
+      event.preventDefault();
+      // Verificar si el target tiene la clase "task_style"
+      if (event.target.classList.contains("task_element")) {
+        const updatedTask = tasks.find((t) => t.id === dragged.id);
+        updatedTask.status = event.target.parentElement.id; // Actualizar el estado de la tarea en el array
+        dragged.parentNode.removeChild(dragged);
+        event.target.appendChild(dragged);
+      }
+    });
+  }
+  
+
+  
+
+// Métodos de búsqueda o filtrado
+
+function findTaskById(id) {
+  return tasks.find((task) => task.id === id);
 }
 
+function filterTasksByStatus(status) {
+  return tasks.filter((task) => task.status === status);
+}
+
+// Puedes usar findTaskById y filterTasksByStatus según tus necesidades
+
 // add task button form
-
-
 document.getElementById("addTaskButton").onclick = addTaskB;
 
 function addTaskB() {
@@ -42,10 +91,7 @@ function addTaskB() {
   addTask.classList.toggle("add_task--active");
 }
 
-
-
 // drag and drop
-
 let dragged = null;
 
 const elements = document.querySelectorAll("#pending, #inProgress, #done");
@@ -73,10 +119,13 @@ elements.forEach((element) => {
 });
 
 
-document.getElementById("task_status--icon").onclick = addTaskStatus;
+const selectBox = document.querySelector('.select-box');
 
-function addTaskStatus() {
-  const addTaskState = document.getElementById("task_status--select");
-  addTaskState.classList.toggle("task_status--active");
-}
+selectBox.addEventListener('change', (event) => {
+  const selectedOption = event.target.value;
 
+  console.log(selectedOption);
+  // Use the selected value to set the status of the task
+  // in the task creation logic
+});
+ 
