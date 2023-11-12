@@ -42,15 +42,17 @@
           <div class="select-box">
             <div class="select-box__current" tabindex="1">
               <div class="select-box__value">
-                <input class="select-box__input" type="radio" id="1" value="2" name="Ben" checked="checked" />
+                <input class="select-box__input" type="radio" id="1" value="pending" name="taskStatus"
+                  checked="checked" />
                 <p class="select-box__input-text">Pending</p>
               </div>
               <div class="select-box__value">
-                <input class="select-box__input" type="radio" id="2" value="3" name="Ben" checked="checked" />
+                <input class="select-box__input" type="radio" id="2" value="inProgress" name="taskStatus"
+                  checked="checked" />
                 <p class="select-box__input-text">In Progress</p>
               </div>
               <div class="select-box__value">
-                <input class="select-box__input" type="radio" id="3" value="4" name="Ben" checked="checked" />
+                <input class="select-box__input" type="radio" id="3" value="done" name="taskStatus" checked="checked" />
                 <p class="select-box__input-text">Done</p>
               </div>
               <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon"
@@ -114,7 +116,7 @@
             <img class="icon_menu" src="./src/assets/menu.svg"" alt=" vertical menu">
           </div>
         </div>
-        <div class="task_element" id="pending" ondragover="event.preventDefault();">
+        <div class="task_element" id="done" ondragover="event.preventDefault();">
           <!-- Body -->
         </div>
       </section>
