@@ -4,10 +4,14 @@ let idCounter = 0;
 window.onload = function () {
   const savedTasks = localStorage.getItem("tasks");
   if (savedTasks) {
-    tasks = JSON.parse(savedTasks);
-    tasks.forEach((task) => {
-      newTaskElement(task);
-    });
+    try {
+      tasks = JSON.parse(savedTasks);
+      tasks.forEach((task) => {
+        newTaskElement(task);
+      });
+    } catch (e) {
+      console.error("Error parsing tasks from localStorage:", e);
+    }
   }
 };
 
