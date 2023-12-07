@@ -1,6 +1,16 @@
 let tasks = [];
 let idCounter = 0;
 
+window.onload = function () {
+  const savedTasks = localStorage.getItem("tasks");
+  if (savedTasks) {
+    tasks = JSON.parse(savedTasks);
+    tasks.forEach((task) => {
+      newTaskElement(task);
+    });
+  }
+};
+
 let taskForm = document.getElementById("form");
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -11,6 +21,7 @@ taskForm.addEventListener("submit", (e) => {
   const taskStatus = document.querySelector(
     'input[name="taskStatus"]:checked'
   ).value;
+
   const newTask = {
     id: taskId,
     name: taskNameValue,
@@ -19,7 +30,6 @@ taskForm.addEventListener("submit", (e) => {
   };
 
   tasks.push(newTask);
-
   console.table("New Task:", newTask);
   console.table("All Tasks:", tasks);
   newTaskElement(newTask);
@@ -97,6 +107,8 @@ elements.forEach((element) => {
         task.status = "done";
       }
     }
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   });
 
   element.addEventListener("drop", (event) => {
