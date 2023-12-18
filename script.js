@@ -22,14 +22,7 @@ taskForm.addEventListener("submit", (e) => {
   const taskId = `div${idCounter}`;
   const taskNameValue = document.getElementById("taskName").value;
   const taskDescValue = document.getElementById("taskDescription").value;
-<<<<<<< HEAD
-  const taskStatus = document.querySelector(
-    'input[name="taskStatus"]:checked'
-  ).value;
-
-=======
   const taskStatus = document.querySelector('input[name="taskStatus"]:checked').value;
->>>>>>> parent of 1489300 (Añadidas funciones basicas del TaskManager)
   const newTask = {
     id: taskId,
     name: taskNameValue,
@@ -38,12 +31,8 @@ taskForm.addEventListener("submit", (e) => {
   };
 
   tasks.push(newTask);
-<<<<<<< HEAD
-  console.table("New Task:", newTask);
-=======
 
   console.table("New Task:", newTask); 
->>>>>>> parent of 1489300 (Añadidas funciones basicas del TaskManager)
   console.table("All Tasks:", tasks);
   newTaskElement(newTask);
 
@@ -134,12 +123,7 @@ elements.forEach((element) => {
         task.status = "done"; 
       }
     }
-<<<<<<< HEAD
-
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-=======
     
->>>>>>> parent of 1489300 (Añadidas funciones basicas del TaskManager)
   });
 
   element.addEventListener("drop", (event) => {
