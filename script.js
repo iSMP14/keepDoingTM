@@ -22,10 +22,14 @@ taskForm.addEventListener("submit", (e) => {
   const taskId = `div${idCounter}`;
   const taskNameValue = document.getElementById("taskName").value;
   const taskDescValue = document.getElementById("taskDescription").value;
+<<<<<<< HEAD
   const taskStatus = document.querySelector(
     'input[name="taskStatus"]:checked'
   ).value;
 
+=======
+  const taskStatus = document.querySelector('input[name="taskStatus"]:checked').value;
+>>>>>>> parent of 1489300 (Añadidas funciones basicas del TaskManager)
   const newTask = {
     id: taskId,
     name: taskNameValue,
@@ -34,30 +38,43 @@ taskForm.addEventListener("submit", (e) => {
   };
 
   tasks.push(newTask);
+<<<<<<< HEAD
   console.table("New Task:", newTask);
+=======
+
+  console.table("New Task:", newTask); 
+>>>>>>> parent of 1489300 (Añadidas funciones basicas del TaskManager)
   console.table("All Tasks:", tasks);
   newTaskElement(newTask);
+
+  // Puedes realizar otras acciones aquí, como limpiar el formulario o actualizar la interfaz.
 });
 
+
+
 function newTaskElement(task) {
-  const pItem = document.createElement("div");
-  pItem.id = task.id;
-  pItem.classList.add("task_style");
-  pItem.draggable = true;
+    const pItem = document.createElement("div");
+    pItem.id = task.id;
+    pItem.classList.add("task_style");
+    pItem.draggable = true;
 
-  const parraphItem = document.createElement("p");
-  const node = document.createTextNode(`${task.name}`);
-  parraphItem.appendChild(node);
-  pItem.appendChild(parraphItem);
+    const parraphItem = document.createElement("p");
+    const node = document.createTextNode(`${task.name}`);
+    parraphItem.appendChild(node);
+    pItem.appendChild(parraphItem);
+  
+    const parraphItem2 = document.createElement("p");
+    const node2 = document.createTextNode(`${task.description}`);
+    parraphItem2.appendChild(node2);
+    pItem.appendChild(parraphItem2);
+  
+    const element = document.getElementById(task.status);
+    element.appendChild(pItem);
 
-  const parraphItem2 = document.createElement("p");
-  const node2 = document.createTextNode(`${task.description}`);
-  parraphItem2.appendChild(node2);
-  pItem.appendChild(parraphItem2);
+  }
+  
 
-  const element = document.getElementById(task.status);
-  element.appendChild(pItem);
-}
+  
 
 // Métodos de búsqueda o filtrado
 
@@ -68,6 +85,8 @@ function findTaskById(id) {
 function filterTasksByStatus(status) {
   return tasks.filter((task) => task.status === status);
 }
+
+
 
 // add task button form
 
@@ -86,36 +105,45 @@ const elements = document.querySelectorAll("#pending, #inProgress, #done");
 
 elements.forEach((element) => {
   element.addEventListener("dragstart", (event) => {
+
     dragged = event.target;
   });
 
   element.addEventListener("dragover", (event) => {
+
     event.preventDefault();
 
+     
     if (event.target.id === "pending") {
-      const taskId = dragged.id;
-      const task = tasks.find((task) => task.id === taskId);
+      const taskId = dragged.id; 
+      const task = tasks.find(task => task.id === taskId); 
       if (task) {
-        task.status = "pending";
+        task.status = "pending"; 
       }
     } else if (event.target.id === "inProgress") {
-      const taskId = dragged.id;
-      const task = tasks.find((task) => task.id === taskId);
+      const taskId = dragged.id; 
+      const task = tasks.find(task => task.id === taskId); 
       if (task) {
-        task.status = "inProgress";
+        task.status = "inProgress"; 
       }
+
     } else if (event.target.id === "done") {
-      const taskId = dragged.id;
-      const task = tasks.find((task) => task.id === taskId);
+      const taskId = dragged.id; 
+      const task = tasks.find(task => task.id === taskId); 
       if (task) {
-        task.status = "done";
+        task.status = "done"; 
       }
     }
+<<<<<<< HEAD
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
+=======
+    
+>>>>>>> parent of 1489300 (Añadidas funciones basicas del TaskManager)
   });
 
   element.addEventListener("drop", (event) => {
+
     event.preventDefault();
 
     if (event.target.className === "task_element") {
@@ -123,4 +151,9 @@ elements.forEach((element) => {
       event.target.appendChild(dragged);
     }
   });
+
 });
+
+
+
+ 

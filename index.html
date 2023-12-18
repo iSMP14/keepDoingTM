@@ -1,194 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="src/assets/icon.svg" type="image/x-icon" />
-    <title>Keep Doing IT</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet" />
-  </head>
 
-  <body>
-    <div class="container">
-      <nav class="navbar">
-        <div class="search__container">
-          <input class="search__input" type="text" placeholder="Search" />
-        </div>
-        <div class="task__boardName"></div>
-        <div class="task__navProfile">
-          <img
-            class="task__navProfile--image"
-            src="src/assets/avatar.svg"
-            alt="profile picture" />
-        </div>
-      </nav>
-      <aside class="sidebar">
-        <div class="sidebar_logo">
-          <img class="sidebar_logo--image" src="src/assets/logo_app.svg" />
-        </div>
-        <div class="sidebar_main">
-          <button id="addTaskButton" class="add_task">
-            Add Task
-            <img
-              src="./src/assets/menu_down.svg"
-              alt="add task"
-              class="menu_down" />
-          </button>
-          <form id="form">
-            <p>Task Name:</p>
-            <input
-              type="text"
-              id="taskName"
-              class="input_form"
-              autocomplete="off"
-              required />
-            <p>Task Description:</p>
-            <textarea
-              autocomplete="off"
-              id="taskDescription"
-              class="input_form--desc"
-              required></textarea>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="src/assets/icon.svg" type="image/x-icon" />
+  <title>Keep Doing IT</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
 
-            <!-- <p>Task Status:</p> -->
-            <div class="select-box">
-              <div class="select-box__current" tabindex="1">
-                <div class="select-box__value">
-                  <input
-                    class="select-box__input"
-                    type="radio"
-                    id="1"
-                    value="pending"
-                    name="taskStatus"
-                    checked="checked" />
-                  <p class="select-box__input-text">Pending</p>
-                </div>
-                <div class="select-box__value">
-                  <input
-                    class="select-box__input"
-                    type="radio"
-                    id="2"
-                    value="inProgress"
-                    name="taskStatus"
-                    checked="checked" />
-                  <p class="select-box__input-text">In Progress</p>
-                </div>
-                <div class="select-box__value">
-                  <input
-                    class="select-box__input"
-                    type="radio"
-                    id="3"
-                    value="done"
-                    name="taskStatus"
-                    checked="checked" />
-                  <p class="select-box__input-text">Done</p>
-                </div>
-                <img
-                  class="select-box__icon"
-                  src="http://cdn.onlinewebfonts.com/svg/img_295694.svg"
-                  alt="Arrow Icon"
-                  aria-hidden="true" />
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="search__container">
+        <input class="search__input" type="text" placeholder="Search" />
+      </div>
+      <div class="task__boardName"></div>
+      <div class="task__navProfile">
+        <img class="task__navProfile--image" src="src/assets/avatar.svg" alt="profile picture" />
+      </div>
+    </nav>
+    <aside class="sidebar">
+      <div class="sidebar_logo">
+        <img class="sidebar_logo--image" src="src/assets/logo_app.svg" />
+      </div>
+      <div class="sidebar_main">
+        <button id="addTaskButton" class="add_task">
+          Add Task
+          <img src="./src/assets/menu_down.svg" alt="add task" class="menu_down" />
+        </button>
+        <form id="form">
+          <p>Task Name:</p>
+          <input type="text" id="taskName" class="input_form" autocomplete="off" required />
+          <p>Task Description:</p>
+          <textarea autocomplete="off" id="taskDescription" class="input_form--desc" required></textarea>
+
+          <!-- <p>Task Status:</p> -->
+          <div class="select-box">
+            <div class="select-box__current" tabindex="1">
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="1" value="pending" name="taskStatus"
+                  checked="checked" />
+                <p class="select-box__input-text">Pending</p>
               </div>
-              <ul class="select-box__list">
-                <li>
-                  <label
-                    class="select-box__option"
-                    for="1"
-                    aria-hidden="aria-hidden"
-                    >Pending</label
-                  >
-                </li>
-                <li>
-                  <label
-                    class="select-box__option"
-                    for="2"
-                    aria-hidden="aria-hidden"
-                    >In Progress</label
-                  >
-                </li>
-                <li>
-                  <label
-                    class="select-box__option"
-                    for="3"
-                    aria-hidden="aria-hidden"
-                    >Done</label
-                  >
-                </li>
-              </ul>
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="2" value="inProgress" name="taskStatus"
+                  checked="checked" />
+                <p class="select-box__input-text">In Progress</p>
+              </div>
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="3" value="done" name="taskStatus" checked="checked" />
+                <p class="select-box__input-text">Done</p>
+              </div>
+              <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon"
+                aria-hidden="true" />
             </div>
+            <ul class="select-box__list">
+              <li>
+                <label class="select-box__option" for="1" aria-hidden="aria-hidden">Pending</label>
+              </li>
+              <li>
+                <label class="select-box__option" for="2" aria-hidden="aria-hidden">In Progress</label>
+              </li>
+              <li>
+                <label class="select-box__option" for="3" aria-hidden="aria-hidden">Done</label>
+              </li>
+            </ul>
+          </div>
 
-            <button id="myButton" type="submit">Add task</button>
-          </form>
+          <button id="myButton" type="submit">Add task</button>
+        </form>
+      </div>
+      <footer class="sidebar_footer">
+        <div class="footer__creator">Creator</div>
+        <div class="footer__about">About</div>
+        <div class="footer__darkmode">ToggleMode</div>
+      </footer>
+    </aside>
+    <main class="task_container">
+      <section class="task_board">
+        <!---- Board 1 ---->
+        <div class="task_states">
+          <!---- Nav ---->
+          <p class="task_states--title">Pending</p>
+          <div class="task_states--menu">
+            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" draggable="false" />
+          </div>
         </div>
-        <footer class="sidebar_footer">
-          <div class="footer__creator">Creator</div>
-          <div class="footer__about">About</div>
-          <div class="footer__darkmode">ToggleMode</div>
-        </footer>
-      </aside>
-      <main class="task_container">
-        <section class="task_board">
-          <!---- Board 1 ---->
-          <div class="task_states">
-            <!---- Nav ---->
-            <p class="task_states--title">Pending</p>
-            <div class="task_states--menu">
-              <img
-                class="icon_menu"
-                src="./src/assets/menu.svg"
-                alt="vertical menu"
-                draggable="false" />
-            </div>
+        <div class="task_element" id="pending" ondragover="event.preventDefault();">
+          <!---- Body ---->
+        </div>
+      </section>
+      <section class="task_board">
+        <!---- Board 2 ---->
+        <div class="task_states">
+          <!---- Nav ---->
+          <p class="task_states--title">In progress</p>
+          <div class="task_states--menu">
+            <img class="icon_menu" src="./src/assets/menu.svg" alt="vertical menu" />
           </div>
-          <div
-            class="task_element"
-            id="pending"
-            ondragover="event.preventDefault();">
-            <!---- Body ---->
+        </div>
+        <div class="task_element" id="inProgress" ondragover="event.preventDefault();">
+          <!---- Body ---->
+        </div>
+      </section>
+      <section class="task_board">
+        <!---- Board 3 ---->
+        <div class="task_states">
+          <!---- Nav ---->
+          <p class="task_states--title">Done</p>
+          <div class="task_states--menu">
+            <img class="icon_menu" src="./src/assets/menu.svg"" alt=" vertical menu">
           </div>
-        </section>
-        <section class="task_board">
-          <!---- Board 2 ---->
-          <div class="task_states">
-            <!---- Nav ---->
-            <p class="task_states--title">In progress</p>
-            <div class="task_states--menu">
-              <img
-                class="icon_menu"
-                src="./src/assets/menu.svg"
-                alt="vertical menu" />
-            </div>
-          </div>
-          <div
-            class="task_element"
-            id="inProgress"
-            ondragover="event.preventDefault();">
-            <!---- Body ---->
-          </div>
-        </section>
-        <section class="task_board">
-          <!---- Board 3 ---->
-          <div class="task_states">
-            <!---- Nav ---->
-            <p class="task_states--title">Done</p>
-            <div class="task_states--menu">
-              <img class="icon_menu" src="./src/assets/menu.svg"" alt=" vertical
-              menu">
-            </div>
-          </div>
-          <div
-            class="task_element"
-            id="done"
-            ondragover="event.preventDefault();">
-            <!-- Body -->
-          </div>
-        </section>
-      </main>
-    </div>
-    <script type="module" src="./script.js"></script>
-  </body>
+        </div>
+        <div class="task_element" id="done" ondragover="event.preventDefault();">
+          <!-- Body -->
+        </div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
 </html>
