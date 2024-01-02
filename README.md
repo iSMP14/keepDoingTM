@@ -9,7 +9,7 @@
 <br>
 
 <div align="center">
-  <p> Repositorio de mi proyecto "KeepDoing IT" para la certificación de JavaScript en Coderhouse.</p>
+  <p> Repositorio de mi proyecto "KeepDoing IT" para poder organizar las tareas diarias. </p>
   <p> Aquí encontrarás información sobre el proyecto, tecnologías usadas, instrucciones de uso y más.</p>
   <p> Espero lo explores, participes y colabores</p>
 </div>
